@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+}
+
+.contador {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Outfit';
+}
+
+.boneca {
+    position: relative;
+    width: 100px;
+    height: 300px;
+}
+
+.cabeca {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc99;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.olho {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.olho.esquerdo {
+    left: 30px;
+    top: 30px;
+}
+
+.olho.direito {
+    right: 30px;
+    top: 30px;
+}
+
+.boca {
+    width: 30px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabelo {
+    position: absolute;
+    width: 3px;
+    height: 80px;
+    background-color: #f1f4aa;
+    top: -2px;
+    transform-origin: top center;
+    border-radius: 2px;
+    animation: wave 2s infinite;
+    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar sobre os fios */
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(10deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* Fios originais */
+.cabelo:nth-child(1) { left: 30%; transform: rotate(70deg); }
+.cabelo:nth-child(2) { left: 35%; transform: rotate(60deg); }
+.cabelo:nth-child(3) { left: 40%; transform: rotate(50deg); }
+.cabelo:nth-child(4) { left: 45%; transform: rotate(40deg); }
+.cabelo:nth-child(5) { left: 50%; transform: rotate(30deg); }
+.cabelo:nth-child(6) { left: 55%; transform: rotate(20deg); }
+.cabelo:nth-child(7) { left: 60%; transform: rotate(10deg); }
+.cabelo:nth-child(8) { left: 65%; transform: rotate(0deg); }
+.cabelo:nth-child(9) { left: 70%; transform: rotate(-10deg); }
+.cabelo:nth-child(10) { left: 75%; transform: rotate(-20deg); }
+
+/* Fios adicionais */
+.cabelo:nth-child(11) { left: 25%; transform: rotate(80deg); }
+.cabelo:nth-child(12) { left: 28%; transform: rotate(75deg); }
+.cabelo:nth-child(13) { left: 32%; transform: rotate(65deg); }
+.cabelo:nth-child(14) { left: 37%; transform: rotate(55deg); }
+.cabelo:nth-child(15) { left: 42%; transform: rotate(45deg); }
+.cabelo:nth-child(16) { left: 47%; transform: rotate(35deg); }
+.cabelo:nth-child(17) { left: 52%; transform: rotate(25deg); }
+.cabelo:nth-child(18) { left: 57%; transform: rotate(15deg); }
+.cabelo:nth-child(19) { left: 62%; transform: rotate(5deg); }
+.cabelo:nth-child(20) { left: 67%; transform: rotate(-5deg); }
+
+.braco {
+    width: 20px;
+    height: 80px;
+    background-color: #ffcc99;
+    position: absolute;
+    top: 100px;
+    border-radius: 10px;
+}
+
+.braco.esquerdo {
+    left: -10px;
+    transform: rotate(20deg);
+}
+
+.braco.direito {
+    right: -10px;
+    transform: rotate(-20deg);
+}
+
+.perna {
+    width: 20px;
+    height: 100px;
+    background-color: #ffcc99;
+    position: absolute;
+    top: 200px;
+    border-radius: 10px;
+}
+
+.perna.esquerda {
+    left: 20px;
+}
+
+.perna.direita {
+    right: 20px;
+}
+
+.vestido {
+    width: 100px;
+    height: 120px;
+    background-color: red;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.dente {
+    position: absolute;
+    bottom: -6,5px; 
+    left: 10px;
+    width: 10px; /* Largura do dente */
+    height: 10px; /* Altura do dente */
+    background-color: white;
+    border-radius: 0 0 5px 5px; /* Bordas arredondadas na parte inferior do dente */
+    display: none; /* Oculta o dente por padrão */
+    z-index: 10; /* Para garantir que o dente fique visível sobre os outros elementos */
+    cursor: pointer; /* Adiciona o cursor de ponteiro ao passar sobre o dente */
+}
